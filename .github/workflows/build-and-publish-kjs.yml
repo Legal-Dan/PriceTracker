@@ -16,6 +16,10 @@ jobs:
       - name: Fetch Sources
         uses: actions/checkout@v2
 
+      # Setup Gradle
+      - name: Create Gradle Wrapper
+        run: gradle wrapper
+
       # Build application
       - name: Test and Build
         run: ./gradlew build
